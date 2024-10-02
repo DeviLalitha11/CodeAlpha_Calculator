@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+input#display {
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: right;
+  border: none;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.btn-number {
+  background-color: #e0e0e0;
+}
+
+.btn-operator {
+  background-color: #f9a825;
+  color: white;
+}
+
+.btn-equals {
+  background-color: #1de9b6;
+  color: white;
+  grid-column: span 2;
+}
+
+.btn-special {
+  background-color: #d32f2f;
+  color: white;
+}
+
+#toggle-theme {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #424242;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#toggle-theme:hover {
+  background-color: #212121;
+}
+
+body.dark-mode {
+  background-color: #303030;
+}
+
+body.dark-mode .calculator {
+  background-color: #424242;
+  color: white;
+}
+
+body.dark-mode input#display {
+  background-color: #616161;
+  color: white;
+}
+
+body.dark-mode button {
+  background-color: #757575;
+  color: white;
+}
+
+body.dark-mode button.btn-equals {
+  background-color: #00bfa5;
+}
+
+body.dark-mode button.btn-operator {
+  background-color: #ffb300;
+}
